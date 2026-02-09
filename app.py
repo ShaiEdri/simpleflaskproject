@@ -27,6 +27,7 @@ def create_tables():
 
 @app.route('/', methods=["GET"])
 def index():
+    print("index")
     t = Todo.query.all()
     return render_template("index.html", list_todo=t)
 
